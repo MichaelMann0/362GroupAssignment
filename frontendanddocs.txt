@@ -1,0 +1,3 @@
+I know I am comfortable with anything front-end related. I want to know how to connect to a 
+database and connect my back-end with my front-end. Generally, deploying a larger scale project
+than what I'm used to is a nice challenge to learn from. 
