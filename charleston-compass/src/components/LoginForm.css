@@ -1,0 +1,81 @@
+.login-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #006A4E;
+  box-shadow: 0 0 0 3px rgba(0, 106, 78, 0.1);
+  background: white;
+}
+
+.form-input::placeholder {
+  color: #a0a0a0;
+  font-weight: 400;
+}
+
+.login-button {
+  width: 100%;
+  background: #006A4E;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 106, 78, 0.2);
+}
+
+.login-button:hover {
+  background: #005a42;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 106, 78, 0.3);
+}
+
+.login-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 106, 78, 0.2);
+}
+
+@media (max-width: 480px) {
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .form-input {
+    padding: 10px 14px;
+    font-size: 0.95em;
+  }
+  
+  .login-button {
+    padding: 12px 20px;
+    font-size: 0.95em;
+  }
+}

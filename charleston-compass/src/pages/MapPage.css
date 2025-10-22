@@ -1,0 +1,150 @@
+.map-page {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+  padding: 40px 20px;
+}
+
+.map-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.map-header h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.map-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2em;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.map-placeholder {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.placeholder-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.map-icon {
+  font-size: 4em;
+  margin-bottom: 24px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.placeholder-content h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 16px;
+}
+
+.placeholder-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1em;
+  color: #5a5a5a;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.coming-soon-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  color: #5a5a5a;
+  padding: 12px 16px;
+  background: rgba(0, 106, 78, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid #006A4E;
+}
+
+.feature-icon {
+  font-size: 1.2em;
+  min-width: 24px;
+}
+
+@media (max-width: 768px) {
+  .map-page {
+    padding: 20px 16px;
+  }
+  
+  .map-header h1 {
+    font-size: 2em;
+  }
+  
+  .map-header p {
+    font-size: 1em;
+  }
+  
+  .map-placeholder {
+    padding: 40px 24px;
+  }
+  
+  .map-icon {
+    font-size: 3em;
+  }
+  
+  .placeholder-content h2 {
+    font-size: 1.5em;
+  }
+  
+  .placeholder-content p {
+    font-size: 1em;
+  }
+  
+  .feature-item {
+    font-size: 0.9em;
+    padding: 10px 12px;
+  }
+}

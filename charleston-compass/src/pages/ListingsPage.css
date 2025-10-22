@@ -1,0 +1,53 @@
+.listings-page {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+  padding: 40px 20px;
+}
+
+.listings-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.listings-content {
+  margin-top: 30px;
+}
+
+.listings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.no-results p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1em;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .listings-page {
+    padding: 20px 16px;
+  }
+  
+  .listings-content {
+    margin-top: 20px;
+  }
+  
+  .no-results {
+    padding: 40px 16px;
+  }
+  
+  .no-results p {
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,95 @@
+.user-type-toggle {
+  margin-bottom: 24px;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #7f8c8d;
+  transition: color 0.3s ease;
+  min-width: 60px;
+  text-align: center;
+}
+
+.toggle-label.active {
+  color: #006A4E;
+  font-weight: 600;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  height: 32px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.toggle-switch:hover {
+  background: #d0d0d0;
+}
+
+.toggle-switch.switched {
+  background: #006A4E;
+}
+
+.toggle-switch.switched:hover {
+  background: #005a42;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch.switched .toggle-slider {
+  transform: translateX(28px);
+}
+
+@media (max-width: 480px) {
+  .toggle-container {
+    gap: 12px;
+    padding: 6px;
+  }
+  
+  .toggle-label {
+    font-size: 0.8em;
+    min-width: 50px;
+  }
+  
+  .toggle-switch {
+    width: 50px;
+    height: 28px;
+  }
+  
+  .toggle-slider {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .toggle-switch.switched .toggle-slider {
+    transform: translateX(22px);
+  }
+}
