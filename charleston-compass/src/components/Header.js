@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ onToggleLogin, onToggleItinerary, isItineraryVisible }) => {
   return (
     <header className="main-header">
       <div className="header-content">
@@ -13,7 +13,21 @@ const Header = () => {
         <nav className="header-nav">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/map" className="nav-link">Map</Link>
-          <Link to="/login" className="nav-link">Login</Link>
+          <button 
+            className="nav-icon-button"
+            onClick={onToggleItinerary}
+            aria-label="Toggle itinerary panel"
+          >
+            <i className="fas fa-clipboard-list"></i>
+            {!isItineraryVisible && <span className="nav-label">My Itinerary</span>}
+          </button>
+          <button 
+            className="nav-icon-button"
+            onClick={onToggleLogin}
+            aria-label="Open login modal"
+          >
+            <i className="fas fa-user-circle"></i>
+          </button>
         </nav>
       </div>
     </header>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 * {
   margin: 0;
@@ -8,9 +9,9 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+  background: linear-gradient(135deg, #F8F8F8 0%, #E0E0E0 100%);
   min-height: 100vh;
-  color: #2c3e50;
+  color: #1A2B3A;
   overflow-x: hidden;
 }
 
@@ -20,7 +21,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -53,7 +54,15 @@ body {
 
 /* Removed main-grid styles - now using single column layout */
 
-/* Content area styles moved to individual page components */
+.main-content {
+  min-height: 100vh;
+}
+
+.content-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 @keyframes slideUp {
   from { transform: translateY(50px); opacity: 0; }
@@ -115,8 +124,8 @@ body {
 }
 
 .pill.active {
-  background: #006A4E;
-  box-shadow: 0 4px 15px rgba(0, 106, 78, 0.3);
+  background: #008080;
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
 }
 
 .search-container {

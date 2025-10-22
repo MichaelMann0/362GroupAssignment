@@ -53,13 +53,43 @@
 }
 
 .nav-link:hover {
-  color: #006A4E;
-  background: rgba(0, 106, 78, 0.1);
+  color: #008080;
+  background: rgba(0, 128, 128, 0.1);
 }
 
 .nav-link.active {
-  color: #006A4E;
-  background: rgba(0, 106, 78, 0.1);
+  color: #008080;
+  background: rgba(0, 128, 128, 0.1);
+}
+
+.nav-icon-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #1A2B3A;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.nav-icon-button:hover {
+  color: #008080;
+  background: rgba(0, 128, 128, 0.1);
+}
+
+.nav-icon-button i {
+  font-size: 1.1em;
+}
+
+.nav-label {
+  font-size: 0.9em;
 }
 
 @media (max-width: 768px) {

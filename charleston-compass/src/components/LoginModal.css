@@ -1,0 +1,130 @@
+.login-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.login-modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.login-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-modal-close:hover {
+  background: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login-modal-close i {
+  color: #1A2B3A;
+  font-size: 1.1em;
+}
+
+.login-modal-header {
+  text-align: center;
+  padding: 40px 40px 20px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.login-modal-header h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: #1A2B3A;
+  margin-bottom: 8px;
+}
+
+.login-modal-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.login-modal-body {
+  padding: 32px 40px 40px;
+}
+
+@media (max-width: 768px) {
+  .login-modal-overlay {
+    padding: 16px;
+  }
+  
+  .login-modal-content {
+    max-width: 100%;
+  }
+  
+  .login-modal-header {
+    padding: 32px 24px 16px;
+  }
+  
+  .login-modal-header h2 {
+    font-size: 1.8em;
+  }
+  
+  .login-modal-body {
+    padding: 24px 24px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-modal-overlay {
+    padding: 8px;
+  }
+  
+  .login-modal-header {
+    padding: 24px 20px 12px;
+  }
+  
+  .login-modal-header h2 {
+    font-size: 1.6em;
+  }
+  
+  .login-modal-body {
+    padding: 20px 20px 24px;
+  }
+}
