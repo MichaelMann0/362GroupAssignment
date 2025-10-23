@@ -7,7 +7,7 @@ const Header = ({ onToggleLogin, onToggleItinerary, isItineraryVisible }) => {
     <header className="main-header">
       <div className="header-content">
         <div className="header-title">
-          <h1>🌸 Charleston Spring Explorer</h1>
+          <h1>🧭Charleston Compass</h1>
           <p>Discover the magic of Charleston in bloom</p>
         </div>
         <nav className="header-nav">
