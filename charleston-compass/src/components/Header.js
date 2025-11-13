@@ -1,8 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import './Header.css';
 
 const Header = ({ onToggleLogin, onToggleItinerary, isItineraryVisible }) => {
+  const { currentUser, logout } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
+  const handleLoginClick = (e) => {
+    e.preventDefault();
+    if (onToggleLogin) {
+      onToggleLogin();
+    }
+  };
+
   return (
     <header className="main-header">
       <div className="header-content">
@@ -21,13 +39,47 @@ const Header = ({ onToggleLogin, onToggleItinerary, isItineraryVisible }) => {
             <i className="fas fa-clipboard-list"></i>
             {!isItineraryVisible && <span className="nav-label">My Itinerary</span>}
           </button>
-          <button 
-            className="nav-icon-button"
-            onClick={onToggleLogin}
-            aria-label="Open login modal"
-          >
-            <i className="fas fa-user-circle"></i>
-          </button>
+          {currentUser ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+              <span style={{ 
+                color: '#006A4E', 
+                fontWeight: '600',
+                fontSize: '0.95em',
+                fontFamily: "'Inter', sans-serif"
+              }}>
+                {currentUser.displayName || currentUser.email?.split('@')[0]}
+              </span>
+              <button 
+                onClick={handleLogout}
+                className="nav-icon-button"
+                style={{
+                  background: '#006A4E',
+                  color: 'white',
+                  padding: '8px 16px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
+                aria-label="Logout"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <button 
+              className="nav-icon-button"
+              onClick={handleLoginClick}
+              aria-label="Open login modal"
+              title="Login / Sign up"
+              style={{ 
+                cursor: 'pointer',
+                fontSize: '1.8em',
+                padding: '4px 8px'
+              }}
+            >
+              <i className="fas fa-user-circle"></i>
+            </button>
+          )}
         </nav>
       </div>
     </header>
