@@ -34,7 +34,8 @@ function App() {
       price: "$25-45",
       icon: "🌸",
       attendees: 150,
-      organizer: { name: "Charleston Garden Society", email: "info@charlestongardens.org" }
+      organizer: { name: "Charleston Garden Society", email: "info@charlestongardens.org" },
+      photo: "/images/events/gardenFestival.jpg"
     },
     {
       id: 2,
@@ -47,7 +48,8 @@ function App() {
       price: "$55",
       icon: "🚣‍♀️",
       attendees: 24,
-      organizer: { name: "Charleston Kayak Tours", email: "tours@charlestonkayak.com" }
+      organizer: { name: "Charleston Kayak Tours", email: "tours@charlestonkayak.com" },
+      photo: "/images/events/sunsetKayak.jpg"
     },
     {
       id: 3,
@@ -60,7 +62,8 @@ function App() {
       price: "Free",
       icon: "🎨",
       attendees: 200,
-      organizer: { name: "King Street Arts Association", email: "events@kingstreetarts.org" }
+      organizer: { name: "King Street Arts Association", email: "events@kingstreetarts.org" },
+      photo: "/images/events/spring-art-walk.png"
     },
     {
       id: 4,
@@ -73,7 +76,8 @@ function App() {
       price: "$40",
       icon: "🌺",
       attendees: 80,
-      organizer: { name: "Magnolia Plantation", email: "events@magnoliaplantation.org" }
+      organizer: { name: "Magnolia Plantation", email: "events@magnoliaplantation.org" },
+      photo: "/images/events/cherry-blossom-picnic.png"
     },
     
     // Restaurants
@@ -89,7 +93,8 @@ function App() {
       priceRange: "$$$",
       icon: "🌿",
       attendees: 50,
-      organizer: { name: "The Vendue Hotel", email: "dining@thevendue.com" }
+      organizer: { name: "The Vendue Hotel", email: "dining@thevendue.com" },
+      photo: "/images/restaurants/vendue-rooftop.png"
     },
     {
       id: 12,
@@ -103,7 +108,8 @@ function App() {
       priceRange: "$",
       icon: "🥐",
       attendees: 30,
-      organizer: { name: "Callie's Kitchen", email: "info@calliesbiscuit.com" }
+      organizer: { name: "Callie's Kitchen", email: "info@calliesbiscuit.com" },
+      photo: "/images/restaurants/callies-biscuit.png"
     },
     {
       id: 13,
@@ -117,7 +123,8 @@ function App() {
       priceRange: "$$$",
       icon: "🦪",
       attendees: 40,
-      organizer: { name: "The Darling", email: "reservations@thedarling.com" }
+      organizer: { name: "The Darling", email: "reservations@thedarling.com" },
+      photo: "/images/restaurants/darling-oyster.png"
     },
     {
       id: 14,
@@ -131,7 +138,8 @@ function App() {
       priceRange: "$$",
       icon: "🍳",
       attendees: 35,
-      organizer: { name: "Jestine's Kitchen", email: "info@jestineskitchen.com" }
+      organizer: { name: "Jestine's Kitchen", email: "info@jestineskitchen.com" },
+      photo: "/images/restaurants/jestines-kitchen.png"
     },
 
     // Attractions
@@ -145,7 +153,8 @@ function App() {
       admission: "$20",
       icon: "🌻",
       attendees: 100,
-      organizer: { name: "Magnolia Plantation", email: "info@magnoliaplantation.org" }
+      organizer: { name: "Magnolia Plantation", email: "info@magnoliaplantation.org" },
+      photo: "/images/attractions/magnolia-plantation.png"
     },
     {
       id: 22,
@@ -157,7 +166,8 @@ function App() {
       admission: "Free",
       icon: "🏠",
       attendees: 50,
-      organizer: { name: "Charleston Historic Foundation", email: "info@charlestonhistoric.org" }
+      organizer: { name: "Charleston Historic Foundation", email: "info@charlestonhistoric.org" },
+      photo: "/images/attractions/rainbow-row.png"
     },
     {
       id: 23,
@@ -169,7 +179,8 @@ function App() {
       admission: "Free",
       icon: "⛲",
       attendees: 75,
-      organizer: { name: "Charleston Parks Department", email: "parks@charleston.gov" }
+      organizer: { name: "Charleston Parks Department", email: "parks@charleston.gov" },
+      photo: "/images/attractions/waterfront-park.png"
     },
     {
       id: 24,
@@ -181,7 +192,8 @@ function App() {
       admission: "Free",
       icon: "🛍️",
       attendees: 120,
-      organizer: { name: "Charleston City Market", email: "info@charlestoncitymarket.com" }
+      organizer: { name: "Charleston City Market", email: "info@charlestoncitymarket.com" },
+      photo: "/images/attractions/city-market.png"
     },
     {
       id: 25,
@@ -193,7 +205,8 @@ function App() {
       admission: "$25",
       icon: "🌳",
       attendees: 60,
-      organizer: { name: "Boone Hall Plantation", email: "tours@boonehallplantation.org" }
+      organizer: { name: "Boone Hall Plantation", email: "tours@boonehallplantation.org" },
+      photo: "/images/attractions/boone-hall.png"
     }
   ]);
   

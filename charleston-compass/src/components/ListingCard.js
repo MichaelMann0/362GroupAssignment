@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './EventCard.css';
 
+const placeholderImage = process.env.PUBLIC_URL + '/images/placeholders/event-placeholder.svg';
+
 const EventCard = ({ event, onSave, onViewDetails, isSaved = false }) => {
   const [saved, setSaved] = useState(isSaved);
 
@@ -44,7 +46,7 @@ const EventCard = ({ event, onSave, onViewDetails, isSaved = false }) => {
     <div className="event-card">
       <div className="card-image-container">
         <img 
-          src={event.image || `https://images.unsplash.com/photo-${1500000000000 + event.id}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
+          src={event.photo || event.image || placeholderImage}
           alt={event.name}
           className="card-image"
         />

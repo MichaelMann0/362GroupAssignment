@@ -1,6 +1,8 @@
 import React from 'react';
 import './EventDetailModal.css';
 
+const placeholderImage = process.env.PUBLIC_URL + '/images/placeholders/event-placeholder.svg';
+
 const EventDetailModal = ({ event, isOpen, onClose, onBookNow, onContactOrganizer }) => {
   if (!isOpen || !event) return null;
 
@@ -52,7 +54,7 @@ const EventDetailModal = ({ event, isOpen, onClose, onBookNow, onContactOrganize
         
         <div className="modal-image-container">
           <img 
-            src={event.image || `https://images.unsplash.com/photo-${1500000000000 + event.id}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
+            src={event.photo || event.image || placeholderImage}
             alt={event.name}
             className="modal-image"
           />
