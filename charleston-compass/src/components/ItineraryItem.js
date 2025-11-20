@@ -28,13 +28,6 @@ const ItineraryItem = ({ item, onRemove }) => {
 
   return (
     <div className="itinerary-item">
-      <div className="item-image">
-        <img 
-          src={item.image || `https://images.unsplash.com/photo-${1500000000000 + item.id}?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80`}
-          alt={item.name}
-        />
-      </div>
-      
       <div className="item-content">
         <h4 className="item-title">{item.name}</h4>
         <div className="item-meta">

@@ -229,11 +229,12 @@
 
 .modal-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: flex-end;
 }
 
-.action-button {
+.modal-actions .action-button {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -246,27 +247,29 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
+  flex: 0 1 240px;
+  min-width: 200px;
 }
 
-.action-button.primary {
+.modal-actions .action-button.primary {
   background: #008080;
   color: white;
   box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
 }
 
-.action-button.primary:hover {
+.modal-actions .action-button.primary:hover {
   background: #006666;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 128, 128, 0.4);
 }
 
-.action-button.secondary {
+.modal-actions .action-button.secondary {
   background: #F8F8F8;
   color: #1A2B3A;
   border: 2px solid #E0E0E0;
 }
 
-.action-button.secondary:hover {
+.modal-actions .action-button.secondary:hover {
   background: #E0E0E0;
   border-color: #008080;
   color: #008080;
