@@ -49,7 +49,7 @@ function App() {
       icon: "🚣‍♀️",
       attendees: 24,
       organizer: { name: "Charleston Kayak Tours", email: "tours@charlestonkayak.com" },
-      photo: "/images/events/sunsetKayak.jpg"
+      photo: "/images/events/sunsetKayakTour.jpg"
     },
     {
       id: 3,

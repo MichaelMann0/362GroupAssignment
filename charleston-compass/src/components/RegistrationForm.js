@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import './LoginForm.css'; // Reuse the same styles
 
+const passwordRequirements = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
+
 const RegistrationForm = ({ userType, onSuccess, onSwitchToLogin }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -33,8 +35,10 @@ const RegistrationForm = ({ userType, onSuccess, onSwitchToLogin }) => {
       return;
     }
 
-    if (formData.password.length < 6) {
-      setLocalError('Password must be at least 6 characters');
+    if (!passwordRequirements.test(formData.password)) {
+      setLocalError(
+        'Password must be at least 8 characters and include upper/lowercase letters, a number, and a special character.'
+      );
       setIsLoading(false);
       return;
     }
@@ -127,10 +131,20 @@ const RegistrationForm = ({ userType, onSuccess, onSwitchToLogin }) => {
           value={formData.password}
           onChange={handleChange}
           className="form-input"
-          placeholder="Enter your password (min 6 characters)"
+          placeholder="Enter a strong password"
           required
           disabled={isLoading}
         />
+        <p
+          style={{
+            fontSize: '0.85em',
+            color: '#4b5563',
+            marginTop: '6px',
+            lineHeight: 1.4
+          }}
+        >
+          Use at least 8 characters, with uppercase, lowercase, number, and special character.
+        </p>
       </div>
 
       <div className="form-group">
