@@ -31,6 +31,7 @@ const Header = ({ onToggleLogin, onToggleItinerary, isItineraryVisible }) => {
         <nav className="header-nav">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/map" className="nav-link">Map</Link>
+          <Link to="/team" className="nav-link">Team</Link>
           <button 
             className="nav-icon-button"
             onClick={onToggleItinerary}

@@ -10,6 +10,7 @@ import LoginModal from './components/LoginModal';
 import MyItineraryPanel from './components/MyItineraryPanel';
 import MapPage from './pages/MapPage';
 import FloatingShapes from './components/FloatingShapes';
+import TeamPage from './pages/TeamPage';
 
 function App() {
   const [currentCategory, setCurrentCategory] = useState('all');
@@ -276,6 +277,7 @@ function App() {
             </div>
           } />
           <Route path="/map" element={<MapPage />} />
+          <Route path="/team" element={<TeamPage />} />
         </Routes>
 
         <MyItineraryPanel 
