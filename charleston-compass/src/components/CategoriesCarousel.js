@@ -1,15 +1,17 @@
 import React from 'react';
 import './CategoriesCarousel.css';
 
-const CategoriesCarousel = ({ currentCategory, setCurrentCategory }) => {
+const CategoriesCarousel = ({ selectedCategories = [], onToggleCategory }) => {
   const categories = [
-    { id: 'all', name: 'All Events', icon: '🎉', color: '#008080' },
-    { id: 'events', name: 'Popular Events', icon: '⭐', color: '#B87333' },
-    { id: 'restaurants', name: 'Dining', icon: '🍽️', color: '#CC6666' },
-    { id: 'culture', name: 'Arts & Culture', icon: '🎨', color: '#8B5A96' },
-    { id: 'outdoor', name: 'Outdoors', icon: '🌿', color: '#4A9B8E' },
-    { id: 'attractions', name: 'Attractions', icon: '🏛️', color: '#D4A574' }
+    { id: 'all', name: 'All Experiences', icon: '🎉', color: '#008080' },
+    { id: 'culture', name: 'Culture', icon: '🎨', color: '#8B5A96' },
+    { id: 'outdoors', name: 'Nature & Outdoors', icon: '🌿', color: '#4A9B8E' },
+    { id: 'food', name: 'Food & Dining', icon: '🍽️', color: '#CC6666' },
+    { id: 'family', name: 'Family-Friendly', icon: '👨‍👩‍👧', color: '#F9A826' },
+    { id: 'nightlife', name: 'Nightlife', icon: '🌙', color: '#4F46E5' },
+    { id: 'seasonal', name: 'Seasonal', icon: '❄️', color: '#00B7C2' }
   ];
+  const isAllActive = selectedCategories.length === 0;
 
   return (
     <div className="categories-carousel">
@@ -18,8 +20,16 @@ const CategoriesCarousel = ({ currentCategory, setCurrentCategory }) => {
           {categories.map((category) => (
             <button
               key={category.id}
-              className={`carousel-item ${currentCategory === category.id ? 'active' : ''}`}
-              onClick={() => setCurrentCategory(category.id)}
+              className={`carousel-item ${
+                category.id === 'all'
+                  ? isAllActive
+                    ? 'active'
+                    : ''
+                  : selectedCategories.includes(category.id)
+                    ? 'active'
+                    : ''
+              }`}
+              onClick={() => onToggleCategory(category.id)}
               style={{ '--category-color': category.color }}
             >
               <div className="category-icon">{category.icon}</div>
